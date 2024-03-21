@@ -102,31 +102,6 @@
       "args": {
         "outputName": "geoip-asn.dat",
         "wantedList": [
-          "cloudflare",
-          "cloudfront",
-          "facebook",
-          "fastly",
-          "google",
-          "netflix",
-          "telegram",
-          "twitter"
-        ]
-      }
-    },
-    {
-      "type": "v2rayGeoIPDat",
-      "action": "output",
-      "args": {
-        "oneFilePerList": true,
-        "wantedList": ["cn", "private"]
-      }
-    },
-    {
-      "type": "maxmindMMDB",
-      "action": "output",
-      "args": {
-        "outputName": "Country.mmdb",
-        "overwriteList": [
           "cn",
           "private",
           "cloudflare",
@@ -144,6 +119,13 @@
       "type": "maxmindMMDB",
       "action": "output",
       "args": {
+        "outputName": "Country.mmdb"
+      }
+    },
+    {
+      "type": "maxmindMMDB",
+      "action": "output",
+      "args": {
         "outputName": "Country-only-cn-private.mmdb",
         "wantedList": ["cn", "private"]
       }
@@ -154,6 +136,8 @@
       "args": {
         "outputName": "Country-asn.mmdb",
         "wantedList": [
+          "cn",
+          "private",
           "cloudflare",
           "cloudfront",
           "facebook",
