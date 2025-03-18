@@ -204,65 +204,9 @@
         "outputDir": "./output",
         "outputName": "geoip-asn.dat",
         "wantedList": [
-          "cloudflare",
-          "cloudfront",
-          "facebook",
-          "fastly",
-          "google",
-          "netflix",
-          "telegram",
-          "twitter",
-          "tor"
-        ]
-      }
-    },
-    {
-      "type": "v2rayGeoIPDat",
-      "action": "output",
-      "args": {
-        "outputDir": "./output",
-        "oneFilePerList": true,
-        "wantedList": ["cn", "private"]
-      }
-    },
-    {
-      "type": "v2rayGeoIPDat",
-      "action": "output",
-      "args": {
-        "oneFilePerList": true
-      }
-    },
-    {
-      "type": "maxmindMMDB",
-      "action": "output",
-      "args": {
-        "outputDir": "./output",
-        "outputName": "Country.mmdb",
-        "sourceMMDBURI": "./output/GeoLite2-Country.mmdb",
-        "overwriteList": [
           "cn",
+          "private",
           "cloudflare",
-          "cloudfront",
-          "facebook",
-          "fastly",
-          "google",
-          "netflix",
-          "telegram",
-          "twitter",
-          "tor",
-          "private"
-        ]
-      }
-    },
-    {
-      "type": "maxmindMMDB",
-      "action": "output",
-      "args": {
-        "outputDir": "./output",
-        "outputName": "Country-without-asn.mmdb",
-        "sourceMMDBURI": "./output/GeoLite2-Country.mmdb",
-        "overwriteList": ["cn", "private"],
-        "excludedList": [
           "cloudflare",
           "cloudfront",
           "facebook",
@@ -273,6 +217,14 @@
           "twitter",
           "tor"
         ]
+      }
+    },
+    {
+      "type": "maxmindMMDB",
+      "action": "output",
+      "args": {
+        "outputDir": "./output",
+       "outputName": "Country.mmdb"
       }
     },
     {
@@ -281,7 +233,6 @@
       "args": {
         "outputDir": "./output",
         "outputName": "Country-only-cn-private.mmdb",
-        "sourceMMDBURI": "./output/GeoLite2-Country.mmdb",
         "wantedList": ["cn", "private"]
       }
     },
@@ -292,6 +243,8 @@
         "outputDir": "./output",
         "outputName": "Country-asn.mmdb",
         "wantedList": [
+          "cn",
+          "private",
           "cloudflare",
           "cloudfront",
           "facebook",
